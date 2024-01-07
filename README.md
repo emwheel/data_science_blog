@@ -7,11 +7,19 @@ The numerical variables were:
 - Number of Bathrooms
 - Miles to the nearest train station
 - Price in pounds (This is the variable we are trying to predict)
+  
 The categorical variables were:
 - Has a garden
-- Propert Tenure (meaning the type of legal ownership available with 3 different options)
+- Property Tenure (meaning the type of legal ownership available with 3 different options)
 - The postcode
 - The street
 - The name of the nearest train station
 
-For
+For the purpose of this project I narrowed down my research to 3 key questions
+1. Does the tenure of a property impact the property price?
+2. Do the number of bedrooms or the number of bathrooms have a bigger impact on property price? 
+3. How impactful is proximity to the nearest station on property price? 
+
+With a focus on the above questions I removed any columns from the dataset that would not contribute to the analysis. 
+I also removed any rows were the predicted variable, house price, was missing. I also removed row with missing data for the other key variables I was assessing the impact of. 
+I then moved to reviewing the categorical variable, Property Tenure, and created dummy variables for each of the 3 tenure options so it could be assessed in the model.
