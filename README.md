@@ -15,11 +15,38 @@ The categorical variables were:
 - The street
 - The name of the nearest train station
 
+Packages used for project were:
+
+`import numpy as np`
+
+`import pandas as pd`
+
+`import matplotlib.pyplot as plt`
+
+`from collections import defaultdict`
+
+`from sklearn.model_selection import train_test_split`
+
+`from sklearn.linear_model import LinearRegression`
+
+`from sklearn.metrics import r2_score, mean_squared_error`
+
 For the purpose of this project I narrowed down my research to 3 key questions
 1. Does the tenure of a property impact the property price?
 2. Do the number of bedrooms or the number of bathrooms have a bigger impact on property price? 
 3. How impactful is proximity to the nearest station on property price? 
 
-With a focus on the above questions I removed any columns from the dataset that would not contribute to the analysis. 
-I also removed any rows were the predicted variable, house price, was missing. I also removed row with missing data for the other key variables I was assessing the impact of. 
+With a focus on the above questions, I removed any columns from the dataset that would not contribute to the analysis. 
+I also removed any rows with missing data.
 I then moved to reviewing the categorical variable, Property Tenure, and created dummy variables for each of the 3 tenure options so it could be assessed in the model.
+
+Once the dataset was cleansed I created a function to build a linear regression model. 
+Once the model was fitted and trained I could use the coefficents to answer the 3 main questions
+
+### Results
+
+**Question 1 - Does the tenure of a property impact the property price?** - *Answer; Yes it does and being a 'leasehold' had the biggest impact on price out of the 3 tenure options*
+
+**Question 2 - Do the number of bedrooms or the number of bathrooms have a bigger impact on property price?** - *Answer; As seen in the coeffecients, bedrooms have more significant impact on property price than bathrooms*
+
+**Question 3 - How impactful is proximity to the nearest station on property price?** Answer; *Proximity to the nearest station is quite impactful on price. The coefficents demonstrate that this is more impactful than number of bathrooms.*
